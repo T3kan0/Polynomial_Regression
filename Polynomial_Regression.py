@@ -30,7 +30,7 @@ plt.scatter(pageSpeeds, purchaseAmount)
 #plt.show()
 
 # The aim is to fit polynomial functions, order [1 - 4].
-n = np.arange(1, 4, 1)
+n = np.arange(1, 10, 1)
 scores = []
 
 for i in n:
@@ -46,10 +46,13 @@ for i in n:
      ax.set_ylim([0, 200])
      plt.scatter(x, y, c = 'g') # Training data..
      plt.plot(xp, p4(xp), c = 'r') # Model to be trained..
+     plt.xlabel('PageSpeeds', fontsize=10)
+     plt.ylabel('PurchaseAmount', fontsize=10)
      r3 = r2_score(np.array(trainY), p4(np.array(trainX)))
-     plt.text(4.0, 151.0, 'Train Data: r ='+str(round(r3, 2)), bbox=dict(fill=False, edgecolor='red', linewidth=1))
-     plt.text(4.0, 131.0, 'Polynomial Order ='+str(i), bbox=dict(fill=False, edgecolor='red', linewidth=1))
+     plt.text(3.0, 151.0, 'Train Data: r ='+str(round(r3, 2)), bbox=dict(fill=False, edgecolor='red', linewidth=1))
+     plt.text(3.0, 131.0, 'Polynomial Order ='+str(i), bbox=dict(fill=False, edgecolor='red', linewidth=1))
      plt.savefig('poly_'+str(i)+'_train_fit.png')
+     plt.close()
 
      testx = np.array(testX)
      testy = np.array(testY)
@@ -58,10 +61,13 @@ for i in n:
      axes.set_ylim([0, 200])
      plt.scatter(testx, testy, c='k') # Test data..
      plt.plot(xp, p4(xp), c = 'r') # Trained Model..
+     plt.xlabel('PageSpeeds', fontsize=10)
+     plt.ylabel('PurchaseAmount', fontsize=10)
      r2 = r2_score(testy, p4(testx))
-     plt.text(4.0, 151.0, 'Test Data: r ='+str(round(r2, 2)), bbox=dict(fill=False, edgecolor='red', linewidth=1))
-     plt.text(4.0, 131.0, 'Polynomial Order ='+str(i), bbox=dict(fill=False, edgecolor='red', linewidth=1))
+     plt.text(3.0, 151.0, 'Test Data: r ='+str(round(r2, 2)), bbox=dict(fill=False, edgecolor='red', linewidth=1))
+     plt.text(3.0, 131.0, 'Polynomial Order ='+str(i), bbox=dict(fill=False, edgecolor='red', linewidth=1))
      plt.savefig('poly_'+str(i)+'_test_fit.png')
+     plt.close()
 
      
      scores.append(r2)
@@ -83,7 +89,7 @@ for j in imgs:
 frames[0].save('png_to_gif.gif', format = 'GIF',
                append_images = frames[1:],
                save_all = True,
-               duration = 1000,
+               duration = 1500,
                Loop = 0)
 
 
