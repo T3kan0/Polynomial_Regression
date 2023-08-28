@@ -21,7 +21,7 @@ The data used here was generated randomly with the ***numpy python*** library. T
 ### Profile Model 🧮
 The code employs supervised machine learning from the library ***sklearn*** for the analysis. The data is split into trainig and testing data, then the model is trained with the said training data, before it can be fit to the test data. Similar to many other models, the training data was 80% of the overall data, while the 20% was used to test the data.
 ### Code Output 📈 
-For every polynomial function fitted, in order to know determine the goodness of the model fit, I calculated the regression determination coefficient. The data was best described by the first order polynomial, therefore, Linear Regression. See the figure below.
+For every polynomial function fitted, in order to know determine the goodness of the model fit, I calculated the regression determination coefficient. The data was best described by a sixth order polynomial. See the figure below.
 <p align="center">
     <img width="700" src="https://github.com/T3kan0/Polynomial_Regression/blob/main/png_to_gif.gif" alt="Material Bread logo">
 </p> 
