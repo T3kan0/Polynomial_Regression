@@ -20,3 +20,9 @@ You will need to install the following software on your system in order to run/e
 The data used here was generated randomly with the ***numpy python*** library. The data is meant to only help us see how the different Polynomial orders can fit the data. For us to see things to avoid when fitting the data, such as overfitting when the order of the polynomial function gets high. In this case, the data was best fit with a polynomial function of the first order, i.e., Linear. 
 ### Profile Model 🧮
 The code employs supervised machine learning from the library ***sklearn*** for the analysis. The data is split into trainig and testing data, then the model is trained with the said training data, before it can be fit to the test data. Similar to many other models, the training data was 80% of the overall data, while the 20% was used to test the data.
+### Code Output 📈 
+For every polynomial function fitted, in order to know determine the goodness of the model fit, I calculated the regression determination coefficient. The data was best described by the first order polynomial, therefore, Linear Regression. See the figure below.
+
+
+
+
