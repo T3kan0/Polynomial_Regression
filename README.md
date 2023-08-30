@@ -7,7 +7,7 @@ This is an example of the supervised Machine Learning algorithms/techniques ofte
 ## Software Requirements 🔌
 You will need to install the following software on your system in order to run/edit the Python script.
 * Mac OS/ Ubuntu 18.04 OS
-* Python 3.7
+* Python 3.10.12
 * Textedit/ IDE - spyder or jupyter-notebook
 * Python libraries
   * Numpy
